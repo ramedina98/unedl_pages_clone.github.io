@@ -7,13 +7,6 @@
 html, 
 body{
     width: 100%;
+    height: auto;
     background-color: rgb(240, 240, 240); 
-    border: 1px solid red;
 }
-
-
-/*Reglas para etiquetas*/
-
-/*Regla para clases*/
-
-/*Reglas para IDs*/
