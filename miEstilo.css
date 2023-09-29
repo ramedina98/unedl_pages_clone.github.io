@@ -1,0 +1,19 @@
+/*Reglas generales...*/
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+html, 
+body{
+    width: 100%;
+    background-color: rgb(240, 240, 240); 
+    border: 1px solid red;
+}
+
+
+/*Reglas para etiquetas*/
+
+/*Regla para clases*/
+
+/*Reglas para IDs*/
