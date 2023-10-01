@@ -273,6 +273,7 @@ main{
             width: 85%;
             height: auto;
             padding: 1em 0;
+            margin-bottom: 1em;
         }
     }
 }
@@ -299,6 +300,7 @@ footer{
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            margin: 1.5em 0;
             & ul{
                 width: 70%;
                 height: auto;
@@ -396,6 +398,7 @@ footer{
         align-items: center;
         flex-direction: column;
         & .up{
+            margin-top: 1em;
             width: 85%;
             text-align: left;
             & a{
@@ -438,6 +441,27 @@ footer{
                 font-style: italic;
                 color: var(--select);
                 transition: all 400ms ease-in-out;
+            }
+        }
+        & .down{
+            width: 85%;
+            height: auto;
+            padding: 2em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            & .cont_more_info{
+                width: 420px;
+                height: 90px;
+                & p{
+                    color: #f5f4f4;
+                    font-family: var(--font);
+                    letter-spacing: 0.03em;
+                    font-size: 1.1em;
+                }
             }
         }
     }
