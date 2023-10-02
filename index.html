@@ -32,8 +32,20 @@
             </div>
         </div>
         <div class="chat_cont">
+            <!--Drop down menu...-->
+            <!--Aun falta darle funcionalidad a cada boton del menu de abajo... -->
+            <div class="drop_menu_cont">
+                <ul>
+                    <li><i class='bx bx-edit-alt'></i> Cambiar nombre</li>
+                    <li><i class='bx bx-envelope' ></i> Transición de correo electronico</li>
+                    <li><i class='bx bx-bell-off' ></i> Sonido desactivado</li>
+                    <li><i class='bx bx-link-external' ></i> Widge Emergente</li>
+                    <li><i class='bx bx-message-square-add' ></i> AñAde chat a tu sitio web</li>
+                </ul>
+            </div>
+            <!--End-->
             <div class="header">
-                <i class='bx bx-menu'></i>
+                <i class='bx bx-menu' id="burguer"></i>
                 <i class='bx bx-x' id="close"></i>
             </div>
             <div class="menssage">
@@ -45,6 +57,29 @@
                 </p>
             </div>
             <div class="output">
+                <!--Emojis menu-->
+                <div class="emojis_menu">
+                    <ul>
+                        <li>😀</li>
+                        <li>😀</li>
+                        <li>😄</li>
+                        <li>🤢</li>
+                        <li>😯</li>
+                        <li>🤡</li>
+                        <li>😡</li>
+                        <li>😰</li>
+                        <li>🫡</li>
+                        <li>😷</li>
+                        <li>🤒</li>
+                        <li>🙊</li>
+                        <li>🫰</li>
+                        <li>🤟</li>
+                        <li>🤙</li>
+                        <li>👻</li>
+                        <li>👽</li>
+                        <li>👾</li>
+                    </ul>
+                </div>
                 <!--Chat menssage-->
                 <div class="chat_menssage">
                     <div class="avatar">
@@ -67,15 +102,28 @@
                     </div>
                 </div>
                 <!--People menssage-->
+                <div class="people_menssage">
+                    <div class="cont_menssage_people">
+                        <p>
+                            Hola, necesito informacion sobre las
+                            carreras que ofrecen
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="writing_zone">
                 <div class="input_cont">
-                    <input type="text" name="ask" placeholder="Escriba aqui y pulse 'intro'.">
+                    <input type="text" name="ask" placeholder="Escriba aqui y pulse 'intro'." class="input1">
                 </div>
-                <div class="functions">
+                <div class="functions" id="notSend">
+                    <!--Este boton solo debe de mandar likes directo al chat-->
                     <i class='bx bx-like'></i>
-                    <i class='bx bx-file'></i>
-                    <i class='bx bx-happy'></i>
+                    <i class='bx bx-file' id="files"></i>
+                    <input type="file" id="fileInput" style="display: none;">
+                    <i class='bx bx-happy emojis'></i>
+                </div>
+                <div class="functions" id="send">
+                    <i class='bx bx-happy emojis1'></i>
                 </div>
             </div>
         </div>
