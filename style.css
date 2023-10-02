@@ -57,15 +57,17 @@ body{
     }
 }
 .chat_cont{
-    display: none;
     border-radius: 0.3em 0.3em 0 0;
     position: fixed;
     bottom: 0;
     right: 13px;
     width: 370px;
     height: auto;
-    padding: 0.7em 0;
     z-index: 400;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
     & .header{
         background-color: var(--main_blue);
         width: 100%;
@@ -289,9 +291,15 @@ header{
                 font-size: 0.85em;
                 font-weight: 600;
                 letter-spacing: 0.02em;
+                cursor: pointer;
                 & i{
                     font-size: 1.35em;
+                    cursor: pointer;
                 }
+            }
+            & li:hover{
+                color: var(--select);
+                transition: all 300ms ease-in-out;
             }
         }
     }
