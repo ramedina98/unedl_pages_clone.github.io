@@ -22,9 +22,202 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 /*more specific edition*/
+/*here we have the chat bot*/
+.chat_tab{
+    position: fixed;
+    bottom: 0;
+    right: 13px;
+    width: 270px;
+    height: auto;
+    padding: 0.7em 0;
+    background-color: var(--main_blue);
+    z-index: 400;
+    color: #f5f4f4;
+    font-family: var(--font);
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    & .title_chat{
+        margin-left: 1em;
+    }
+    & .noti{
+        position: absolute;
+        top: -10px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: rgb(223, 8, 8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.chat_cont{
+    display: none;
+    border-radius: 0.3em 0.3em 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 13px;
+    width: 370px;
+    height: auto;
+    padding: 0.7em 0;
+    z-index: 400;
+    & .header{
+        background-color: var(--main_blue);
+        width: 100%;
+        height: auto;
+        padding: 1em 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        box-shadow: 0px 2px 6px rgba(84, 84, 84, 0.28);
+        & i{
+            color: #f5f4f4;
+            margin: 0 0.3em;
+            font-size: 1.7em;
+            cursor: pointer;
+        }
+        & i:last-of-type{
+            margin-right: 1em;
+        }
+        & i:hover{
+            color: #e2e2e2;
+            transition: all 300ms ease-in-out;
+        }
+    }
+    & .menssage{
+        width: 100%;
+        height: auto;
+        padding: 0.9em 0;
+        background-color: var(--main_blue);
+        & p{
+            color: #f5f4f4;
+            font-family: var(--font);
+            font-size: 1em;
+            text-align: center;
+            line-height: 1.5;
+            margin: 0 1em;
+        }
+    }
+    & .output{
+        background-color: #f5f4f4;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 1em 0;
+        overflow-y: scroll;
+        & .chat_menssage{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            & .avatar{
+                width: 20%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                & .avatar_cont{
+                    width: 60%;
+                    height: auto;
+                    overflow: hidden;
+                    border-radius: 0.6em;
+                    background-color: rgb(213, 213, 213);
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            & .menssage_noti{
+                width: 58%;
+                height: auto;
+                padding: 0.7em;
+                background-color: var(--main_blue);
+                border-radius: 0.5em;
+                color: #f5f4f4;
+                & p{
+                    font-family: var(--font);
+                    font-size: 0.85em;
+                    letter-spacing: 0.02em;
+                    font-weight: 100;
+                    line-height: 1.5;
+                }
+            }
+            & .time{
+                width: 15%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                & p{
+                    color: rgb(152, 152, 152);
+                    font-family: var(--font);
+                    font-size: 0.75em;
+                    display: none;
+                }
+            }
+            & .time:hover .time_text{
+                display: block;
+                transition: all 300ms ease-in-out;
+            }
+        }
+    }
+    & .writing_zone{
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 0px -1px 4px rgba(20, 20, 20, 0.23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        & .input_cont{
+            width: 70%;
+            height: auto;
+            & input{
+                width: 100%;
+                padding: 1.1em 0.5em;
+                border: none;
+                color: #1a1a1a;
+                font-family: var(--font);
+                letter-spacing: 0.01em;
+                font-size: 0.84em;
+                outline: none;
+            }
+        }
+        & .functions{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            & i{
+                color: #707070;
+                font-size: 1.3em;
+                cursor: pointer;
+            }
+            & i:hover{
+                color: #1a1a1a;
+                font-size: 1.32em;
+                text-shadow: 0px 1px 6px rgba(15, 15, 15, 0.211);
+                transition: all 300ms ease-in-out;
+            }
+        }
+    }
+}
+
 header{
     width: 100%;
     height: auto;
