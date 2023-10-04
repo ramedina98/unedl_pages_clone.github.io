@@ -32,13 +32,96 @@
             </div>
         </div>
         <div class="chat_cont">
+            <!--Cambiar nombre y correo-->
+            <!--name-->
+            <div class="changes_cont" id="nombre">
+                <!--load...-->
+                <div class="windows8">
+                    <div class="wBall" id="wBall_1">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_2">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_3">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_4">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_5">
+                        <div class="wInnerBall"></div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="up_changes">
+                    <div class="icon">
+                        <i class='bx bxs-comment-edit'></i>
+                    </div>    
+                    <div class="info">
+                        <p>
+                            Por favor, cambia tu nombre para 
+                            que podamos reconocerte la próxima vez.
+                        </p>
+                    </div>
+                </div>    
+                <div class="middle_changes">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" placeholder="Ingrese su nombre">
+                </div>   
+                <form class="down_changes">
+                    <button class="cancel">Cancelar</button>
+                    <button class="sub" type="submit">Enviar</button>
+                </form>     
+            </div>
+            <!--Correo-->
+            <div class="changes_cont" id="correo">
+                <!--load...-->
+                <div class="windows8">
+                    <div class="wBall" id="wBall_1">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_2">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_3">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_4">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_5">
+                        <div class="wInnerBall"></div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="up_changes">
+                    <div class="icon">
+                        <i class='bx bxs-envelope' ></i>
+                    </div>    
+                    <div class="info">
+                        <p>
+                            Enviar Transcripción a :
+                        </p>
+                    </div>
+                </div>    
+                <div class="middle_changes">
+                    <label for="name">Correo electrónico</label>
+                    <input type="text" name="name" placeholder="Ingrese su correo">
+                </div>   
+                <form class="down_changes">
+                    <button class="cancel">Cancelar</button>
+                    <button class="sub" type="submit">Enviar</button>
+                </form>     
+            </div>
+            <!--END-->
             <!--Drop down menu...-->
             <!--Aun falta darle funcionalidad a cada boton del menu de abajo... -->
             <div class="drop_menu_cont">
-                <ul>
+                <ul class="list_changes">
                     <li><i class='bx bx-edit-alt'></i> Cambiar nombre</li>
                     <li><i class='bx bx-envelope' ></i> Transición de correo electronico</li>
-                    <li><i class='bx bx-bell-off' ></i> Sonido desactivado</li>
+                    <li id="sonido"><i class='bx bx-bell-off'></i> Sonido desactivado</li>
                     <li><i class='bx bx-link-external' ></i> Widge Emergente</li>
                     <li><i class='bx bx-message-square-add' ></i> AñAde chat a tu sitio web</li>
                 </ul>
@@ -59,7 +142,7 @@
             <div class="output">
                 <!--Emojis menu-->
                 <div class="emojis_menu">
-                    <ul>
+                    <ul id="emojisList">
                         <li>😀</li>
                         <li>😀</li>
                         <li>😄</li>
@@ -80,7 +163,7 @@
                         <li>👾</li>
                     </ul>
                 </div>
-                <!--Chat menssage-->
+                <!--Chat menssage
                 <div class="chat_menssage">
                     <div class="avatar">
                         <div class="avatar_cont">
@@ -100,32 +183,44 @@
                             18:30
                         </p>
                     </div>
-                </div>
-                <!--People menssage-->
-                <div class="people_menssage">
+                </div>-->
+                <!--<div class="contAllDocs">
+                    <div class="notificationDoc">
+                        <div class="cont_doc">
+                            <img src="imagenes/logo_unedl.png" alt="">
+                        </div>
+                        <div class="cont_info">
+                            <p class="fileName">juan.png</p>
+                            <p class="fileSize">176.33KB</p>
+                            <button class="downloadButton">Descargar <i class='bx bx-download'></i></button>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="people_menssage">
                     <div class="cont_menssage_people">
                         <p>
                             Hola, necesito informacion sobre las
                             carreras que ofrecen
                         </p>
                     </div>
-                </div>
+                </div>-->
             </div>
-            <div class="writing_zone">
+            <form class="writing_zone" id="menssageForm">
                 <div class="input_cont">
                     <input type="text" name="ask" placeholder="Escriba aqui y pulse 'intro'." class="input1">
                 </div>
                 <div class="functions" id="notSend">
                     <!--Este boton solo debe de mandar likes directo al chat-->
-                    <i class='bx bx-like'></i>
+                    <i class='bx bx-like' id="like"></i>
                     <i class='bx bx-file' id="files"></i>
                     <input type="file" id="fileInput" style="display: none;">
                     <i class='bx bx-happy emojis'></i>
                 </div>
                 <div class="functions" id="send">
                     <i class='bx bx-happy emojis1'></i>
+                    <button><i class='bx bxs-right-arrow'></i></button>
                 </div>
-            </div>
+            </form>
         </div>
         <!--End-->
         <header>
