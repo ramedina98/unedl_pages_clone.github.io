@@ -11,10 +11,11 @@
         <meta http-equiv="cache_control" content="no-cache">
         <!-- Here I have to writte an base tag -->
         <title>UNEDL || CLONE PAGE</title>
-        <!--css-->
+        <!--icon-->
         <link rel="icon" href="imagenes/icon.ico">
-        <!--JS-->
+        <!--css-->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
         <!--JS-->
         <script src="logic.js" defer></script>
         <!--Fonts of google and icons-->
@@ -36,7 +37,7 @@
             <!--name-->
             <div class="changes_cont" id="nombre">
                 <!--load...-->
-                <div class="windows8">
+                <div class="windows8" id="wind1">
                     <div class="wBall" id="wBall_1">
                         <div class="wInnerBall"></div>
                     </div>
@@ -67,17 +68,17 @@
                 </div>    
                 <div class="middle_changes">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" placeholder="Ingrese su nombre">
+                    <input type="text" name="name" placeholder="Ingrese su nombre" id="inname">
                 </div>   
                 <form class="down_changes">
                     <button class="cancel">Cancelar</button>
-                    <button class="sub" type="submit">Enviar</button>
+                    <button class="sub" type="submit" id="sendName">Enviar</button>
                 </form>     
             </div>
             <!--Correo-->
             <div class="changes_cont" id="correo">
                 <!--load...-->
-                <div class="windows8">
+                <div class="windows8" id="wind2">
                     <div class="wBall" id="wBall_1">
                         <div class="wInnerBall"></div>
                     </div>
@@ -107,11 +108,11 @@
                 </div>    
                 <div class="middle_changes">
                     <label for="name">Correo electrónico</label>
-                    <input type="text" name="name" placeholder="Ingrese su correo">
+                    <input type="text" name="name" placeholder="Ingrese su correo" id="incorreo">
                 </div>   
                 <form class="down_changes">
                     <button class="cancel">Cancelar</button>
-                    <button class="sub" type="submit">Enviar</button>
+                    <button class="sub" type="submit" id="sendCorreo">Enviar</button>
                 </form>     
             </div>
             <!--END-->
@@ -241,12 +242,12 @@
                     <li>Aspirantes</li>
                     <li>Alumnos</li>
                     <li>Servicio a la comunidad</li>
-                    <li>Egresados</li>
-                    <li>Contacto</li>
-                    <li><i class='bx bxl-twitter'></i></li>
-                    <li><i class='bx bxl-youtube' ></i></li>
-                    <li><i class='bx bxl-facebook'></i></li>
-                    <li><i class='bx bxl-instagram' ></i></li>
+                    <li><a href="https://www.unedl.edu.mx/egresados/index.php">Egresados</a></li>
+                    <li><a href="https://www.unedl.edu.mx/portal/contacto.php?">Contacto</a></li>
+                    <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FUnedlU" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCb1gn6tWP-s19car8cfYwwA" target="_blank"><i class='bx bxl-youtube' ></i></a></li>
+                    <li><a href="https://www.facebook.com/unedl.universidad" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/unedl.universidad/" target="_blank"><i class='bx bxl-instagram' ></i></a></li>
                 </ul>
             </nav>
         </header>

@@ -12,10 +12,12 @@ const btnEmojis1 = document.querySelector(".emojis1");
 const files = document.getElementById("files");
 const inputFiles = document.getElementById("fileInput");
 const cancelChanges = document.querySelectorAll(".cancel");
-const sendChanges = document.querySelectorAll(".sub");
+const sendChanges1 = document.getElementById("sendName");
+const sendChanges2 = document.getElementById("sendCorreo");
 const changesName = document.getElementById("nombre");
 const changesEmail = document.getElementById("correo");
-const loadCircle = document.querySelector(".windows8");
+const loadCircle1 = document.getElementById("wind1");
+const loadCircle2 = document.getElementById("wind2");
 //writting zone...
 const input1 = document.querySelector(".input1");
 const form = document.getElementById("menssageForm");
@@ -67,15 +69,23 @@ cancelChanges.forEach(boton => {
         changesEmail.style.display = "none";
     })
 })
-sendChanges.forEach(send => {
-    send.addEventListener('click', (event) => {
-        event.preventDefault();
-        loadCircle.style.display = "block";
-        setTimeout(function(){
-            document.querySelector(".changes_cont").style.display = "none";
-            loadCircle.style.display = "none";
-        }, 2000);
-    })
+sendChanges1.addEventListener('click', (event) => {
+    event.preventDefault();
+    loadCircle1.style.display = "block";
+    setTimeout(function(){
+        changesName.style.display = "none";
+        loadCircle1.style.display = "none";
+        document.getElementById("inname").value = '';
+    }, 2000);
+})
+sendChanges2.addEventListener('click', (event) => {
+    event.preventDefault();
+    loadCircle2.style.display = "block";
+    setTimeout(function(){
+        changesEmail.style.display = "none";
+        loadCircle2.style.display = "none";
+        document.getElementById("incorreo").value = '';
+    }, 2000);
 })
 //subida de archivos...
 //aun falta que lo muestre en el input de archicos (hacer uno)
@@ -301,7 +311,8 @@ function menuOfemojis(){
         emojisMenu[i].addEventListener('click', function() {
             const emojiSeleccionado = this.innerText;
             // assigns the selected emoji to the input...
-            input1.value = emojiSeleccionado;
+            let cont = input1.value;
+            input1.value = cont + " " + emojiSeleccionado;
         });
     }
 }
@@ -309,11 +320,13 @@ menuOfemojis();
 //Here we are workin
 function sound() {
     const sonido = document.getElementById("sonido");
-    if(sonido.textContent = 'Sonido desactivado') {
+    if(sonido.value === 0) {
+        sonido.value = 1; 
         const audio = new Audio('sound/noti.mp3')
         audio.play();
         sonido.innerHTML = `<i class='bx bx-bell'></i> Sonido activado`;
     }else{ //checar por que no cambia??
+        sonido.value = 0;
         sonido.innerHTML = `<i class='bx bx-bell-off'></i> Sonido desactivado`;
     }
 }

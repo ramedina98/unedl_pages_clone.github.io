@@ -576,9 +576,17 @@ header{
                 font-weight: 600;
                 letter-spacing: 0.02em;
                 cursor: pointer;
-                & i{
-                    font-size: 1.35em;
-                    cursor: pointer;
+                & a{
+                    text-decoration: none;
+                    color: var(--main_blue);
+                    & i{
+                        font-size: 1.35em;
+                        cursor: pointer;
+                    }
+                }
+                & a:hover{
+                    color: var(--select);
+                    transition: all 300ms ease-in-out;
                 }
             }
             & li:hover{

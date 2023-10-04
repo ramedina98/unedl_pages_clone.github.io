@@ -1,0 +1,16 @@
+/*This is the css for responsive functions...*/
+@media screen and (max-width: 927px){
+    header{
+        & nav{
+            & ul{
+                display: none;
+            }
+        }
+    }
+    .carrusel{
+        & .carrusel_cont{
+            width: 650px;
+            height: 550px;
+        }
+    }
+}
