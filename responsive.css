@@ -2,15 +2,63 @@
 @media screen and (max-width: 927px){
     header{
         & nav{
+            justify-content: flex-end;
             & ul{
+                display: none;
+            }
+            & .burguerMenu{
+                display: flex;
+            }
+        }
+    }
+    main{
+        & .carrusel{
+            & .carrusel_cont{
+                width: 650px;
+                height: 450px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 615px){
+    main{
+        & .carrusel{
+            & .carrusel_cont{
+                width: 320px;
+                height: 350px;
+            }
+        }
+        & .eventos{
+            & .facebook{
                 display: none;
             }
         }
     }
-    .carrusel{
-        & .carrusel_cont{
-            width: 650px;
-            height: 550px;
+}
+@media screen and (max-width: 404px){
+    header{
+        & .logo_spliter{
+            & .logo{
+                & a{
+                    position: absolute;
+                    left: 0px;
+                }
+            }
+        }
+    }
+    main{
+        & .eventos{
+            /*checar aqui el width...*/
+            & .img_plataforma_cont{
+                width: 90%;
+            }
+            & .eventos_and_more{
+                & article{
+                    & .tex_btns_cont{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

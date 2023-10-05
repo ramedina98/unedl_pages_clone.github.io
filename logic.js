@@ -18,6 +18,8 @@ const changesName = document.getElementById("nombre");
 const changesEmail = document.getElementById("correo");
 const loadCircle1 = document.getElementById("wind1");
 const loadCircle2 = document.getElementById("wind2");
+const openMainDropMenu = document.querySelector(".burguerMenu");
+const mainMenuCont = document.querySelector(".main_dropdown_menu");
 //writting zone...
 const input1 = document.querySelector(".input1");
 const form = document.getElementById("menssageForm");
@@ -86,6 +88,14 @@ sendChanges2.addEventListener('click', (event) => {
         loadCircle2.style.display = "none";
         document.getElementById("incorreo").value = '';
     }, 2000);
+})
+openMainDropMenu.addEventListener('click', () => {
+    mainMenuCont.style.display = "flex";
+    if(mainMenuCont.style.display === 'flex'){
+        document.getElementById("closeBtn").addEventListener('click', () => {
+            mainMenuCont.style.display = "none";
+        })
+    }
 })
 //subida de archivos...
 //aun falta que lo muestre en el input de archicos (hacer uno)
