@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&display=swap'); 
+.img_header{
+    width: 100%;
+    height: 220px;
+    background-image: url("https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2944&q=80");
+    background-position: center;
+    background-size: cover;
+}
+#title_news{
+    font-family: 'Newsreader', serif;
+}
 main{
     width: 100%;
     height: auto;
@@ -15,6 +26,56 @@ main{
         flex-direction: column;
     }
 }
+/*The main info*/
+.pre_info{
+    width: 70%;
+    height: auto;
+    padding: 1.5em 0;
+    & h1{
+        text-align: center;
+    }
+    & p{
+        margin-top: 1em;
+        font-size: 1.3em;
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+        & .subtitle{
+            font-weight: 700;
+            font-size: 1.4em;
+        }
+    }
+}
+.img_cont{
+    width: 750px;
+    height: 530px;
+    background-image: url("https://foreignpolicy.com/wp-content/uploads/2023/10/israel-gaza-hamas-soldier-palestine-GettyImages-1715804996.jpg?quality=90");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.049);
+    margin-bottom: 2em;
+}
+.info_cont{
+    width: 70%;
+    height: auto;
+    padding: 1em 0;
+    & .date{
+        font-weight: 700;
+        font-size: 0.9em;
+        letter-spacing: 0.02em;
+    }
+    & p{
+        line-height: 1.5em;
+        font-size: 1.09em;
+        letter-spacing: 0.02em;
+    }
+    & .author{
+        font-weight: 700;
+        font-size: 1.09em;
+        letter-spacing: 0.02em;
+        text-decoration: underline;
+    }
+}
+/*end*/
 #datos{
     width: 650px;
     height: auto;
@@ -42,5 +103,227 @@ main{
             border: none;
             border-radius: 0.5em;
         }
+    }
+}
+#imagenes_menu {
+    & li{
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid transparent;
+        & a{
+            text-decoration: none;
+            background-color: transparent;
+        }
+    }
+    & li:hover{
+        background-color: rgba(172, 172, 172, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border: 1px solid rgba(0, 0, 0, 0.726);
+    }
+}
+footer{
+    padding: 2em 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px -1px 6px rgba(54, 54, 54, 0.234);
+    & .nameOf{
+        width: 90%;
+        height: auto;
+        padding: 1em 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & h3{
+            font-family: 'Newsreader', serif;
+            color: rgb(29, 29, 29);
+        }
+    }
+    & .moreLinks_cont{
+        border-bottom: 1px solid rgba(37, 37, 37, 0.372);
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        & .categorias{
+            width: 75%;
+            height: auto;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+            /*cartas con los links*/
+            & .card_links ul {
+                list-style: none;
+            }
+            & .card_links{
+                width: 180px;
+                height: auto
+            }
+            & ul{
+                padding-left: 0;
+                width: 100%;
+                height: auto;
+                & li{
+                    cursor: pointer;
+                    width: 100%;
+                    height: auto;
+                    padding: 0.3em 0;
+                }
+            }
+            & .categoria{
+                padding-bottom: 0.7em;
+                font-family: 'Newsreader', serif;
+                color: rgba(0, 0, 0, 0.763);
+            }
+            & .card_links .element-con-borde {
+                display: inline-block;
+                background-image: linear-gradient(to right, #000, #000); /* Color del subrayado (negro en este caso) */
+                background-repeat: no-repeat;
+                background-position: bottom left;
+                background-size: 0% 2px; /* Ancho inicial de la línea de fondo */
+                transition: background-size 0.3s ease-in-out;
+            }
+            & .card_links .element-con-borde:hover {
+                animation: grow_border 1s forwards; 
+                background-size: 100% 2px; /* Cambia el color y grosor del borde al hacer hover */
+            }
+        }
+        & .suscripciones{
+            border-left: 1px solid rgba(37, 37, 37, 0.372);
+            width: 280px;
+            height: 580px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            & .up{
+                border-bottom: 1px solid rgba(37, 37, 37, 0.372);
+                width: 90%;
+                height: 50%;
+                & ul{
+                    padding-left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    list-style: none;
+                    & .title_n{
+                        font-family: 'Newsreader', serif;
+                        color: rgba(0, 0, 0, 0.758);
+                        letter-spacing: 0.02em;
+                        margin-bottom: 1em;
+                    }
+                    & .title_n:hover {
+                        animation: none; 
+                        background-size: 0;
+                    }
+                    & .n{
+                        font-weight: 700;
+                        font-size: 1.1em;
+                        letter-spacing: 0.02em;
+                        padding: 0.1em 0;
+                    }
+                    & .n:nth-last-of-type(4){
+                        margin-bottom: 1em;
+                    }
+                    & li{
+                        font-size: 0.9em;
+                        padding: 0.09em 0;
+                    }
+                }
+            }
+            & .down{
+                width: 90%;
+                height: 50%;
+                & ul{
+                    padding-left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    list-style: none;
+                    & li{
+                        font-size: 0.9em;
+                        padding: 0.09em 0;
+                    }
+                    & li:first-of-type{
+                        margin-top: 0.7em;
+                    }
+                }
+            }
+            & li{
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                display: inline-block;
+                background-image: linear-gradient(to right, #000, #000); /* Color del subrayado (negro en este caso) */
+                background-repeat: no-repeat;
+                background-position: bottom left;
+                background-size: 0% 2px; /* Ancho inicial de la línea de fondo */
+                transition: background-size 0.3s ease-in-out;
+            }
+            & li:hover {
+                animation: grow_border 1s forwards; 
+                background-size: 100% 2px;
+            }
+        }
+    }
+    & .terminos{
+        width: 90%;
+        padding: 1em 0;
+        height: auto;
+        & ul{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 7px;
+            list-style: none;
+            padding-left: 0;
+            & li{
+                border-bottom: 1px solid transparent;
+                padding: 0.3em 0;
+                cursor: pointer;
+                display: inline-block;
+                background-image: linear-gradient(to right, #000, #000); /* Color del subrayado (negro en este caso) */
+                background-repeat: no-repeat;
+                background-position: bottom left;
+                background-size: 0% 2px; /* Ancho inicial de la línea de fondo */
+                transition: background-size 0.3s ease-in-out;
+                & a{
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 0.745);
+                    font-size: 0.75em;
+                }
+            }
+            & li:hover {
+                animation: grow_border 1s forwards; 
+                background-size: 100% 2px; 
+            }
+        }
+    }
+}
+@keyframes grow_border {
+    from {
+        background-size: 0% 1px;
+    }
+    to {
+        background-size: 100% 1px;
     }
 }
